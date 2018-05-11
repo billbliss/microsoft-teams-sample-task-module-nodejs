@@ -20,12 +20,12 @@
     },
     "description": {
         "short": "Teams demo app for Microsoft Build 2018",
-        "full": "This sample app provides a very simple app for Microsoft Teams. You can extend this to add more content and capabilities."
+        "full": "Teams demo app"
     },
     "accentColor": "#020081",
     "configurableTabs": [
         {
-            "configurationUrl": "https://build2018.ngrok.io/configure",
+            "configurationUrl": "https://task-modules-demo.ngrok.io/configure",
             "canUpdateConfiguration": true,
             "scopes": [
                 "team"
@@ -36,8 +36,8 @@
         {
             "entityId": "com.microsoft.teams.build2018.taskmodule",
             "name": "Tasks!",
-            "contentUrl": "https://build2018.ngrok.io/taskmodule",
-            "websiteUrl": "https://build2018.ngrok.io/taskmodule",
+            "contentUrl": "https://task-modules-demo.ngrok.io/taskmodule",
+            "websiteUrl": "https://task-modules-demo.ngrok.io/taskmodule",
             "scopes": [
                 "personal"
             ]
@@ -45,7 +45,7 @@
     ],
     "bots": [
         {
-            "botId": "bdc707d5-48e0-48f8-bbe7-6131e0565a4c",
+            "botId": "2e222c1e-9508-4560-b507-833a7b55cc51",
             "scopes": [
                 "team",
                 "personal"
@@ -54,7 +54,7 @@
     ],
     "composeExtensions": [
         {
-            "botId": "bdc707d5-48e0-48f8-bbe7-6131e0565a4c",
+            "botId": "2e222c1e-9508-4560-b507-833a7b55cc51",
             "canUpdateConfiguration": false,
             "commands": [
                 {
@@ -78,6 +78,6 @@
         "messageTeamMembers"
     ],
     "validDomains": [
-        "build2018.ngrok.io"
+        "task-modules-demo.ngrok.io"
     ]
 }

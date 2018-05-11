@@ -66,7 +66,7 @@ let botSettings = {
 let bot = new TeamsBot(connector as builder.ChatConnector, botSettings);
 
 // Adding a messaging extension to our app
-// let messagingExtension = new MessagingExtension(connector);
+let messagingExtension = new MessagingExtension(connector);
 
 // Set up route for the bot to listen.
 // NOTE: This endpoint cannot be changed and must be api/messages
@@ -89,5 +89,5 @@ app.get("/ping", (req, res) => {
 // Start our nodejs app
 app.listen(app.get("port"), function(): void {
     console.log("Express server listening on port " + app.get("port"));
-    console.log("Bot messaging endpoint: " + config.get("app.baseUri") + "/api/messages");
+    // console.log("Bot messaging endpoint: " + config.get("app.baseUri") + "/api/messages");
 });

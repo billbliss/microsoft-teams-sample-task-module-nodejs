@@ -1,6 +1,11 @@
 {
+    "app": {
+        "baseUri": "",
+        "appId": ""
+    },
     "bot": {
-        "microsoftAppId": "00000000-0000-0000-0000-000000000000",
-        "microsoftAppPassword": "yourBotAppPassword"
-    }
+        "appId": "2e222c1e-9508-4560-b507-833a7b55cc51",
+        "appPassword": "coahSS089:}wnaOMIKM04$!"
+    },
+    "storage": "memory"
 }

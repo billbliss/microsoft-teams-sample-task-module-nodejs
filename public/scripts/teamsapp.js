@@ -66,6 +66,8 @@
                             break;
                         case "customform":
                             taskInfo.title = "Custom Form";
+                            taskInfo.height = "medium";
+                            taskInfo.width = "medium";
                             microsoftTeams.task.start(taskInfo, completionHandler);
                             break;
                         default:

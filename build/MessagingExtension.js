@@ -38,6 +38,15 @@ class MessagingExtension extends builder.UniversalBot {
             : faker.lorem.sentence();
         // Build the data to send
         let attachments = [];
+        // Generate a card with task module deep links
+        attachments.push(new builder.ThumbnailCard()
+            .title("Task Module Demo Card")
+            .text("This card opens a task module to do its work")
+            .buttons([
+            new builder.CardAction().type("openUrl").title("Custom Form").value("https://teams.microsoft.com/l/task/9dd149d9-7f18-4f36-affc-1ee95ec00d96?url=https%3A%2F%2Ftask-modules-demo.ngrok.io%2Fcustomform&height=medium&width=medium&title=Custom%20Form"),
+            new builder.CardAction().type("openUrl").title("YouTube").value("https://teams.microsoft.com/l/task/9dd149d9-7f18-4f36-affc-1ee95ec00d96?url=https%3A%2F%2Ftask-modules-demo.ngrok.io%2FYouTube&height=medium&width=large&title=Satya%20Nadella's%20Build%202018%20Keynote"),
+        ])
+            .toAttachment());
         // Generate 5 results to send with fake text and fake images
         for (let i = 0; i < 5; i++) {
             attachments.push(new builder.ThumbnailCard()

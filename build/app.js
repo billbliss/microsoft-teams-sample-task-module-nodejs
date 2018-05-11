@@ -31,6 +31,7 @@ const msteams = require("botbuilder-teams");
 const config = require("config");
 const storage = require("./storage");
 const TeamsBot_1 = require("./TeamsBot");
+const MessagingExtension_1 = require("./MessagingExtension");
 let app = express();
 app.set("port", process.env.PORT || 3333);
 app.use(express.static(path.join(__dirname, "../public")));
@@ -60,7 +61,7 @@ let botSettings = {
 };
 let bot = new TeamsBot_1.TeamsBot(connector, botSettings);
 // Adding a messaging extension to our app
-// let messagingExtension = new MessagingExtension(connector);
+let messagingExtension = new MessagingExtension_1.MessagingExtension(connector);
 // Set up route for the bot to listen.
 // NOTE: This endpoint cannot be changed and must be api/messages
 app.post("/api/messages", connector.listen());
@@ -78,7 +79,7 @@ app.get("/ping", (req, res) => {
 // Start our nodejs app
 app.listen(app.get("port"), function () {
     console.log("Express server listening on port " + app.get("port"));
-    console.log("Bot messaging endpoint: " + config.get("app.baseUri") + "/api/messages");
+    // console.log("Bot messaging endpoint: " + config.get("app.baseUri") + "/api/messages");
 });
 
 //# sourceMappingURL=app.js.map
