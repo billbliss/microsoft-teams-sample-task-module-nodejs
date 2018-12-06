@@ -80,6 +80,7 @@ export class RootDialog extends builder.IntentDialog
                 url3: taskModuleLink(appInfo.appId, constants.TaskModuleStrings.CustomFormTitle, constants.TaskModuleSizes.customform.height, constants.TaskModuleSizes.customform.width, `${appRoot()}/${constants.TaskModuleIds.CustomForm}`, null, `${appRoot()}/${constants.TaskModuleIds.CustomForm}`, appInfo.appId),
                 url4: taskModuleLink(appInfo.appId, constants.TaskModuleStrings.AdaptiveCardTitle, constants.TaskModuleSizes.adaptivecard.height, constants.TaskModuleSizes.adaptivecard.width, null, cardTemplates.adaptiveCard, null, appInfo.appId),
                 url5: taskModuleLink(appInfo.appId, constants.TaskModuleStrings.AdaptiveCardTitle, constants.TaskModuleSizes.adaptivecard.height, constants.TaskModuleSizes.adaptivecard.width, null, cardTemplates.adaptiveCard, null, appInfo.appId),
+                url6: taskModuleLink(appInfo.appId, constants.TaskModuleStrings.WolframTitle, constants.TaskModuleSizes.wolfram.height, constants.TaskModuleSizes.wolfram.width, `${appRoot()}/${constants.TaskModuleIds.Wolfram}`, null, `${appRoot()}/${constants.TaskModuleIds.Wolfram}`),
             };
 
             let cardData: any = {
@@ -101,22 +102,29 @@ export class RootDialog extends builder.IntentDialog
                 linkbutton5: constants.TaskModuleStrings.AdaptiveCardSequenceName,
                 url5: taskModuleUrls.url5,
                 markdown5: `[${constants.TaskModuleStrings.AdaptiveCardSequenceName}](${taskModuleUrls.url5})`,
+                linkbutton6: constants.TaskModuleStrings.WolframName,
+                url6: taskModuleUrls.url6,
+                markdown6: `[${constants.TaskModuleStrings.WolframName}](${taskModuleUrls.url6})`,
                 fetchButtonId1: `${constants.TaskModuleIds.YouTube}`,
                 fetchButtonId2: `${constants.TaskModuleIds.PowerApp}`,
                 fetchButtonId3: `${constants.TaskModuleIds.CustomForm}`,
                 fetchButtonId4: `${constants.TaskModuleIds.AdaptiveCard1}`,
                 fetchButtonId5: `${constants.TaskModuleIds.AdaptiveCard2}`,
+                fetchButtonId6: `${constants.TaskModuleIds.Wolfram}`,
                 fetchButtonTitle1: `${constants.TaskModuleStrings.YouTubeName}`,
                 fetchButtonTitle2: `${constants.TaskModuleStrings.PowerAppName}`,
                 fetchButtonTitle3: `${constants.TaskModuleStrings.CustomFormName}`,
                 fetchButtonTitle4: `${constants.TaskModuleStrings.AdaptiveCardSingleName}`,
                 fetchButtonTitle5: `${constants.TaskModuleStrings.AdaptiveCardSequenceName}`,
+                fetchButtonTitle6: `${constants.TaskModuleStrings.WolframName}`,
                 tfJsonTitle1: `${constants.TaskModuleStrings.YouTubeName}`,
                 tfJson1: `${JSON.stringify(fetchTemplates[constants.TaskModuleIds.YouTube])}`,
                 tfJsonTitle2: `${constants.TaskModuleStrings.PowerAppName}`,
                 tfJson2: `${JSON.stringify(fetchTemplates[constants.TaskModuleIds.PowerApp])}`,
                 tfJsonTitle3: `${constants.TaskModuleStrings.CustomFormName}`,
                 tfJson3: `${JSON.stringify(fetchTemplates[constants.TaskModuleIds.CustomForm])}`,
+                tfJsonTitle4: `${constants.TaskModuleStrings.WolframName}`,
+                tfJson4: `${JSON.stringify(fetchTemplates[constants.TaskModuleIds.Wolfram])}`,
             };
 
             session.send(new builder.Message(session).addAttachment(

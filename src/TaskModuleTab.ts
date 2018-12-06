@@ -117,6 +117,8 @@ document.addEventListener("DOMContentLoaded", function(): void {
         deepLink.href = taskModuleLink(appId, constants.TaskModuleStrings.YouTubeTitle, constants.TaskModuleSizes.youtube.height, constants.TaskModuleSizes.youtube.width, `${appRoot()}/${constants.TaskModuleIds.YouTube}`, null, `${appRoot()}/${constants.TaskModuleIds.YouTube}`);
         deepLink = document.getElementById("dlPowerApps") as HTMLAnchorElement;
         deepLink.href = taskModuleLink(appId, constants.TaskModuleStrings.PowerAppTitle, constants.TaskModuleSizes.powerapp.height, constants.TaskModuleSizes.powerapp.width, `${appRoot()}/${constants.TaskModuleIds.PowerApp}`, null, `${appRoot()}/${constants.TaskModuleIds.PowerApp}`);
+        deepLink = document.getElementById("dlWolfram") as HTMLAnchorElement;
+        deepLink.href = taskModuleLink(appId, constants.TaskModuleStrings.WolframTitle, constants.TaskModuleSizes.wolfram.height, constants.TaskModuleSizes.wolfram.width, `${appRoot()}/${constants.TaskModuleIds.Wolfram}`, null, `${appRoot()}/${constants.TaskModuleIds.Wolfram}`);
         deepLink = document.getElementById("dlCustomForm") as HTMLAnchorElement;
         deepLink.href = taskModuleLink(appId, constants.TaskModuleStrings.CustomFormTitle, constants.TaskModuleSizes.customform.height, constants.TaskModuleSizes.customform.width, `${appRoot()}/${constants.TaskModuleIds.CustomForm}`, null, `${appRoot()}/${constants.TaskModuleIds.CustomForm}`);
         deepLink = document.getElementById("dlAdaptiveCard1") as HTMLAnchorElement;
@@ -144,6 +146,12 @@ document.addEventListener("DOMContentLoaded", function(): void {
                             taskInfo.title = constants.TaskModuleStrings.PowerAppTitle;
                             taskInfo.height = constants.TaskModuleSizes.powerapp.height;
                             taskInfo.width = constants.TaskModuleSizes.powerapp.width;
+                            microsoftTeams.tasks.startTask(taskInfo, submitHandler);
+                            break;
+                        case constants.TaskModuleIds.Wolfram:
+                            taskInfo.title = constants.TaskModuleStrings.WolframTitle;
+                            taskInfo.height = constants.TaskModuleSizes.wolfram.height;
+                            taskInfo.width = constants.TaskModuleSizes.wolfram.width;
                             microsoftTeams.tasks.startTask(taskInfo, submitHandler);
                             break;
                         case constants.TaskModuleIds.CustomForm:

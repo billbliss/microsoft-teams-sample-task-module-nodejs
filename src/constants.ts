@@ -49,12 +49,14 @@ export const UrlPlaceholders = "loginHint={loginHint}&upn={userPrincipalName}&aa
 export const TaskModuleStrings = {
     YouTubeTitle: "Microsoft Ignite 2018 Vision Keynote",
     PowerAppTitle: "PowerApp: Asset Checkout",
+    WolframTitle: "Wolfram: Forces on a Partially Submerged Gate",
     CustomFormTitle: "Custom Form",
     AdaptiveCardTitle: "Create a new job posting",
     AdaptiveCardKitchenSinkTitle: "Adaptive Card: Inputs",
     ActionSubmitResponseTitle: "Action.Submit Response",
     YouTubeName: "YouTube",
     PowerAppName: "PowerApp",
+    WolframName: "Wolfram",
     CustomFormName: "Custom Form",
     AdaptiveCardSingleName: "Adaptive Card - Single",
     AdaptiveCardSequenceName: "Adaptive Card - Sequence",
@@ -65,6 +67,7 @@ export const TaskModuleStrings = {
 export const TaskModuleIds = {
     YouTube: "youtube",
     PowerApp: "powerapp",
+    Wolfram: "wolfram",
     CustomForm: "customform",
     AdaptiveCard1: "adaptivecard1",
     AdaptiveCard2: "adaptivecard2",
@@ -80,6 +83,10 @@ export const TaskModuleSizes = {
     powerapp: {
         width: 720,
         height: 520,
+    },
+    wolfram: {
+        width: 800,
+        height: 600,
     },
     customform: {
         width: 510,

@@ -74,6 +74,10 @@ module.exports.setup = function(app: any): void {
         res.render("powerapp");
     });
 
+    app.get("/wolfram", function(req: Request, res: Response): void {
+        res.render("wolfram");
+    });
+
     app.get("/customform", function(req: Request, res: Response): void {
         // Render the template, passing the appId so it's included in the rendered HTML
         res.render("customform", { appId: config.get("app.appId") });

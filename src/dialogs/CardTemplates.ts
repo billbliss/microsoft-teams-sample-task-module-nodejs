@@ -99,14 +99,18 @@ export const cardTemplates: any = {
                                 },
                                 {
                                     "title": "Button 3 URL",
-                                    "value": "{{markdown3}}"
+                                    "value": "{{markdown6}}"
                                 },
                                 {
                                     "title": "Button 4 URL",
-                                    "value": "{{markdown4}}"
+                                    "value": "{{markdown3}}"
                                 },
                                 {
                                     "title": "Button 5 URL",
+                                    "value": "{{markdown4}}"
+                                },
+                                {
+                                    "title": "Button 6 URL",
                                     "value": "{{markdown5}}"
                                 }
                             ]
@@ -127,6 +131,11 @@ export const cardTemplates: any = {
                             "type": "Action.OpenUrl",
                             "title": "{{linkbutton2}}",
                             "url": "{{url2}}"
+                        },
+                        {
+                            "type": "Action.OpenUrl",
+                            "title": "{{linkbutton6}}",
+                            "url": "{{url6}}"
                         },
                         {
                             "type": "Action.OpenUrl",
@@ -182,6 +191,19 @@ export const cardTemplates: any = {
                         {
                             "type": "TextBlock",
                             "weight": "Bolder",
+                            "text": "{{tfJsonTitle4}}"
+                        },
+                        {
+                            "type": "TextBlock",
+                            "spacing": "None",
+                            "height": "stretch",
+                            "text": "{{tfJson4}}",
+                            "isSubtle": true,
+                            "wrap": true
+                        },
+                        {
+                            "type": "TextBlock",
+                            "weight": "Bolder",
                             "text": "{{tfJsonTitle3}}"
                         },
                         {
@@ -219,6 +241,17 @@ export const cardTemplates: any = {
                                     "type": "task/fetch"
                                 },
                                 "taskModule": "{{fetchButtonId2}}"
+                            }
+                        },
+                        {
+                            "type": "Action.Submit",
+                            "id": "{{fetchButtonId6}}",
+                            "title": "{{fetchButtonTitle6}}",
+                            "data": {
+                                "msteams": {
+                                    "type": "task/fetch"
+                                },
+                                "taskModule": "{{fetchButtonId6}}"
                             }
                         },
                         {
@@ -776,6 +809,18 @@ export const fetchTemplates: any = {
                 "width": constants.TaskModuleSizes.powerapp.width,
                 "fallbackUrl": `${appRoot()}/${constants.TaskModuleIds.PowerApp}`,
                 "url": `${appRoot()}/${constants.TaskModuleIds.PowerApp}`,
+            },
+        },
+    },
+    wolfram: {
+        "task": {
+            "type": "continue",
+            "value": {
+                "title": constants.TaskModuleStrings.WolframTitle,
+                "height": constants.TaskModuleSizes.wolfram.height,
+                "width": constants.TaskModuleSizes.wolfram.width,
+                "fallbackUrl": `${appRoot()}/${constants.TaskModuleIds.Wolfram}`,
+                "url": `${appRoot()}/${constants.TaskModuleIds.Wolfram}`,
             },
         },
     },
